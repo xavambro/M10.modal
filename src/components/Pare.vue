@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h3>{{message}}</h3>
+    <div class="container">
+        <h3 class="mb-3">{{message}}</h3>
         <ModalBootstrap>
             <template v-slot:header>
                 <h5 class="modal-title" id="exampleModalLabel">Cambio de moneda</h5>
@@ -47,3 +47,4 @@ export default {
     } */
 }
 </script>
+
