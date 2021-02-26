@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h3 class="mb-3">{{message}}</h3>
-        <ModalBootstrap>
+        <ModalBootstrap :euros="eur">
             <template v-slot:header>
                 <h5 class="modal-title" id="exampleModalLabel">Cambio de moneda</h5>
                 <button type="button" class="close" data-dismiss="modal" @click="message='Heu tancat el modal'" aria-label="Close">
@@ -9,8 +9,7 @@
                 </button>
             </template>
             <template v-slot:body>
-                <input v-model.number="eur" type = "number">
-                <p class="mt-2">El cambio de {{eur}} euros en dolares son {{eur | eurToUsd}}$</p>
+                <input v-model.number="eur" type="number">
             </template>
             <template v-slot:footer>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="message='Heu tancat el modal'">Cerrar</button>
@@ -20,31 +19,7 @@
     </div>
 </template>
 
-<script>
-import ModalBootstrap from './ModalBootstrap'
+<script src="../scripts/pare.js">
 
-export default {
-    name:'Pare',
-    data(){
-        return {
-            eur:'',
-            message:''
-        }
-    },
-    components: {
-        ModalBootstrap
-    },
-    filters:{
-        eurToUsd(value){
-                return value*1.23;
-            
-        }
-    },
-    /* computed:{
-        isFloat(){
-            return /[+-]?([0-9]*[.])?[0-9]+/.test(this.eur) ? true : false    
-        }
-    } */
-}
 </script>
 

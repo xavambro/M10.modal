@@ -14,6 +14,7 @@
             </div>
             <div class="modal-body">
                 <slot name="body"></slot>
+                <p class="mt-2">El cambio de {{euros}} euros en dolares son {{euros | eurToUsd}}$</p>
             </div>
             <div class="modal-footer">
                 <slot name="footer"></slot>
@@ -24,9 +25,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    name:'ModalBootstrap'   
-}
+<script src="../scripts/modalbootstrap.js">
 </script>
 
