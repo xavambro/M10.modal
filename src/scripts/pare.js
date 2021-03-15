@@ -5,7 +5,8 @@ export default {
     data(){
         return {
             eur:'',
-            message:''
+            message:'',
+            showModal: false,
         }
     },
     components: {

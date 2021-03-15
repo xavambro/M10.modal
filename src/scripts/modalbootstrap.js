@@ -1,3 +1,4 @@
+import Bounce from '../animations/Bounce'
 export default {
     name:'ModalBootstrap',
     props:['euros'],
@@ -6,5 +7,9 @@ export default {
             return value*1.23;
             
         }
-    },  
+    }, 
+    components:{
+        Bounce
+    }
+    
 }
